@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ev veya işletmeniz için en iyi çözümler.">
+    <meta name="keywords" content="pvc, pencere üretimi, uygun fiyatlı pencere montajı, uygun fiyatlı pencere üretimi">
+    <title>Çiçek Cam PVC Çözümleri | Hakkımızda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="light-mode">
+    <div class="dark-mode-switch" id="darkModeSwitch">
+        <span class="icon" id="sunIcon">&#9728;</span>
+        <span class="icon" id="moonIcon">&#9790;</span>
+    </div>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="./img/Logo/logo_cicek.png" alt="Your Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li class="current"><a href="aboutus.html">Hakkımızda</a></li>
+                    <li><a href="products.html">Ürünlerimiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase2">
+        <div class="container">
+            <h2 style="font-family: Righteous;">Biz Kimiz?</h2>
+            <p>1990 Yılında ISICAM montaj bayii olarak faaliyetine başlayan firmamız, 1996' dan sonra düz cam, ayna, cam çerçeve işlerinde parekende olarak çorum ve çevresinde hizmet vermeye devam ederek  2002 Yılında PVC ve Cam Balkon imlatına başlamıştır.2011 yılından itiabren Pimapen üretici bayiisi olarak halen üretimimizi sürdemeye devam etmekteyiz.</p>
+            <p>Kupa Cam Balkon ve Pimapen ile beraber birçok projede çalıştık. Lüks villalardan yüksek katlı konutlara, apartmanlara kadar birçok farklı projede yer aldık.</p>
+        </div>
+    </section>
+    <div class="container1">
+        <h2 style="text-align: center; font-family: Righteous;">Kupa Cam Balkon ve Pimapen ile yaptığımız bazı projelerimiz.</h2>
+    </div>
+    <div class="container">
+        <div class="container1">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+              <img src="img/Products/cambalkon1.jpg" style="width: 100%;">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+              <img src="img/Products/cambalkon2.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+              <img src="img/Products/cambalkon3.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+              <img src="img/Products/pvc1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+              <img src="img/Products/pvc2.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+              <img src="img/Products/pvc3.jpg" style="width:100%">
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="img/Products/cambalkon1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cam Balkon Örneği">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/Products/cambalkon2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cam Balkon Örneği">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/Products/cambalkon3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cam Balkon Örneği">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/Products/pvc1.jpg" style="width:100%" onclick="currentSlide(4)" alt="PVC Örneği">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/Products/pvc2.jpg" style="width:100%" onclick="currentSlide(5)" alt="PVC Örneği">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/Products/pvc3.jpg" style="width:100%" onclick="currentSlide(6)" alt="PVC Örneği">
+            </div>
+          </div>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("demo");
+                let captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+    </div>
+    <footer> 
+        <div class="container">
+            <div>
+                <div class="contact-details">
+                    <p>
+                        E-mail:&nbsp; <a href="mailto:ciceklercam@gmail.com">
+                            <span class="icon-envelope icon-white"></span>
+                            <button>Email Gönder</button>
+                        </a>
+                    </p>
+                        Harita:&nbsp; <a href="https://maps.app.goo.gl/Xb3kXgx88dxNdmTu5" target="_blank" class="map-link">
+                        <span class="icon-map-marker icon-white"></span>
+                        <button>Haritada Göster</button>
+                    </a>
+                    <p  class="footer-contact-number">
+                        Telefon:&nbsp;<span class="icon-phone icon-white"></span>
+                        <button>(364) 213 59 40</button>
+                    </p>
+                    <div class="footer-basic">
+                        <div class="social"><a href="https://www.instagram.com/cicekcamcorum?igsh=MXJqdW5xMmkxZXNkeA=="><i class="icon ion-social-instagram"></i></a><a href="https://wa.me/903642135940"><i class="icon ion-social-whatsapp"></i></i></a><a href="https://twitter.com/ErsanCicekci"><i class="icon ion-social-twitter"></i></a><a href="https://tr-tr.facebook.com/ersan.cicekci"><i class="icon ion-social-facebook"></i></a></div>
+                        <p class="copyright">Çiçek Cam PVC ve Cam Balkon Çözümleri, Tüm Hakları Saklıdır &copy; 2024</p>
+                    </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></scrip>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>   
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon = document.getElementById('moonIcon');
+            const body = document.body;
+
+            darkModeSwitch.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const isDarkMode = body.classList.contains('dark-mode');
+
+                sunIcon.style.display = isDarkMode ? 'none' : 'inline';
+                moonIcon.style.display = isDarkMode ? 'inline' : 'none';
+        });
+    });
+    </script>
+</body>
+</html>
