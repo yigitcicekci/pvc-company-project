@@ -7,37 +7,48 @@
     <meta name="keywords" content="pvc, pencere üretimi, uygun fiyatlı pencere montajı, uygun fiyatlı pencere üretimi">
     <title>Çiçek Cam PVC Çözümleri | Hakkımızda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="light-mode">
-    <div class="dark-mode-switch" id="darkModeSwitch">
-        <span class="icon" id="sunIcon">&#9728;</span>
-        <span class="icon" id="moonIcon">&#9790;</span>
-    </div>
     <header>
         <div class="container">
             <div id="branding">
                 <img src="./img/Logo/logo_cicek.png" alt="Your Logo">
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li class="current"><a href="aboutus.html">Hakkımızda</a></li>
-                    <li><a href="products.html">Ürünlerimiz</a></li>
-                </ul>
+              <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li class="current"><a href="aboutus.html">Hakkımızda</a></li>
+                <li><a href="products.html">Ürünlerimiz</a></li>
+            </ul>
+                <div class="dark-mode-switch">
+                    <input type="checkbox" id="toggle-dark-mode" class="toggle">
+                    <label for="toggle-dark-mode" class="label">
+                        <span class="day-mode">☀️</span>
+                        <span class="night-mode">🌙</span>
+                    </label>
+                </div>
             </nav>
         </div>
     </header>
     <section id="showcase2">
         <div class="container">
-            <h2 style="font-family: Righteous;">Biz Kimiz?</h2>
+            <h2 style="font-family: Oswald;">Biz Kimiz?</h2>
             <p>1990 Yılında ISICAM montaj bayii olarak faaliyetine başlayan firmamız, 1996' dan sonra düz cam, ayna, cam çerçeve işlerinde parekende olarak çorum ve çevresinde hizmet vermeye devam ederek  2002 Yılında PVC ve Cam Balkon imlatına başlamıştır.2011 yılından itiabren Pimapen üretici bayiisi olarak halen üretimimizi sürdemeye devam etmekteyiz.</p>
             <p>Kupa Cam Balkon ve Pimapen ile beraber birçok projede çalıştık. Lüks villalardan yüksek katlı konutlara, apartmanlara kadar birçok farklı projede yer aldık.</p>
         </div>
     </section>
+    <div>
+      <h2 style="text-align: center; font-family: Oswald; font-size: 35px;">İş Ortaklarımız</h2>
+      <ul class="partner-logos">
+        <li>
+          <img src="img/Logo/logo_kupa.png" alt="Kupa Cam Balkon Sistemleri">
+          <img src="img/Logo/logo_pimapen.png" alt="Pimapen">
+        </li>
+      </ul>
+    </div>
     <div class="container1">
-        <h2 style="text-align: center; font-family: Righteous;">Kupa Cam Balkon ve Pimapen ile yaptığımız bazı projelerimiz.</h2>
+        <h2 style="text-align: center; font-family: Oswald; font-size: 35px;">Projelerimiz</h2>
     </div>
     <div class="container">
         <div class="container1">
@@ -91,83 +102,49 @@
             </div>
           </div>
         </div>
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("demo");
-                let captionText = document.getElementById("caption");
-                if (n > slides.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-            }
-        </script>
+        <script src="./scripts/script.js"></script>
     </div>
     <footer> 
-        <div class="container">
-            <div>
-                <div class="contact-details">
-                    <p>
-                        E-mail:&nbsp; <a href="mailto:ciceklercam@gmail.com">
-                            <span class="icon-envelope icon-white"></span>
-                            <button>Email Gönder</button>
-                        </a>
-                    </p>
-                        Harita:&nbsp; <a href="https://maps.app.goo.gl/Xb3kXgx88dxNdmTu5" target="_blank" class="map-link">
-                        <span class="icon-map-marker icon-white"></span>
-                        <button>Haritada Göster</button>
-                    </a>
-                    <p  class="footer-contact-number">
-                        Telefon:&nbsp;<span class="icon-phone icon-white"></span>
-                        <button>(364) 213 59 40</button>
-                    </p>
-                    <div class="footer-basic">
-                        <div class="social"><a href="https://www.instagram.com/cicekcamcorum?igsh=MXJqdW5xMmkxZXNkeA=="><i class="icon ion-social-instagram"></i></a><a href="https://wa.me/903642135940"><i class="icon ion-social-whatsapp"></i></i></a><a href="https://twitter.com/ErsanCicekci"><i class="icon ion-social-twitter"></i></a><a href="https://tr-tr.facebook.com/ersan.cicekci"><i class="icon ion-social-facebook"></i></a></div>
-                        <p class="copyright">Çiçek Cam PVC ve Cam Balkon Çözümleri, Tüm Hakları Saklıdır &copy; 2024</p>
-                    </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></scrip>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>   
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const darkModeSwitch = document.getElementById('darkModeSwitch');
-            const sunIcon = document.getElementById('sunIcon');
-            const moonIcon = document.getElementById('moonIcon');
-            const body = document.body;
-
-            darkModeSwitch.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-                const isDarkMode = body.classList.contains('dark-mode');
-
-                sunIcon.style.display = isDarkMode ? 'none' : 'inline';
-                moonIcon.style.display = isDarkMode ? 'inline' : 'none';
-        });
-    });
-    </script>
+      <div class="container">
+          <div class="contact-details">
+              <div class="contact-item">
+                  <i class="ion-android-chat"></i>
+                  <p>ciceklercam@gmail.com</p>
+                  <a href="mailto:ciceklercam@gmail.com">
+                      <button>
+                          <i class="ion-chatbox-working"></i> 
+                          E-Mail Gönder
+                      </button>
+                  </a>
+              </div>
+              <div class="contact-item">
+                  <i class="ion-android-phone-portrait"></i>
+                  <p>+90 (364) 213 59 40</p>
+                  <a href="tel:+903642135940">
+                      <button>
+                          <i class="ion-ios-telephone"></i>
+                          Bizi Arayın
+                      </button>
+                  </a>
+              </div>
+          </div>
+          <div class="footer-basic">
+              <div class="social">
+                  <a href="https://www.instagram.com/cicekcamcorum?igsh=MXJqdW5xMmkxZXNkeA=="><i class="icon ion-social-instagram"></i></a>
+                  <a href="https://wa.me/903642135940"><i class="icon ion-social-whatsapp"></i></a>
+                  <a href="https://twitter.com/ErsanCicekci"><i class="icon ion-social-twitter"></i></a>
+                  <a href="https://tr-tr.facebook.com/ersan.cicekci"><i class="icon ion-social-facebook"></i></a>
+              </div>
+              <div class="footer-basic">
+                  <p class="copyright">Bu Site, "Yiğit Çiçekci" tarafından dizayn edilmiştir.</p>
+                  <p class="copyright">Cam PVC ve Cam Balkon Çözümleri, Tüm Hakları Saklıdır &copy; 2024</p>
+              </div>
+          </div>
+      </div>
+      <div class="googleMaps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12126.757016818416!2d34.960678!3d40.548454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40872a9684882595%3A0x422b03d3346fe08d!2s%C3%87i%C3%A7ekler%20Cam%20PVC%20Cam%20Balkon%20Al%C3%BCminyum%20Do%C4%9Frama%20Kompozit%20Kaplama%20Cephe%20Giydirme!5e0!3m2!1str!2str!4v1726584888099!5m2!1str!2str"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </footer>  
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

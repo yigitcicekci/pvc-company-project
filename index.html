@@ -6,16 +6,14 @@
     <meta name="description" content="İşiniz veya işletmeniz için en iyi çözümler.">
     <meta name="keywords" content="pvc, pencere üretimi, uygun fiyatlı pencere montajı, uygun fiyatlı pencere üretimi">
     <title>Cicek Cam | Hoş Geldiniz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./scripts/script.js">
 </head>
 <body class="light-mode">
-    <div class="dark-mode-switch" id="darkModeSwitch">
-        <span class="icon" id="sunIcon">&#9728;</span>
-        <span class="icon" id="moonIcon">&#9790;</span>
-    </div>
-    <header>
+      <header>
         <div class="container">
             <div id="branding">
                 <img src="./img/Logo/logo_cicek.png" alt="Your Logo">
@@ -26,6 +24,13 @@
                     <li><a href="aboutus.html">Hakkımızda</a></li>
                     <li><a href="products.html">Ürünlerimiz</a></li>
                 </ul>
+                <div class="dark-mode-switch">
+                    <input type="checkbox" id="toggle-dark-mode" class="toggle">
+                    <label for="toggle-dark-mode" class="label">
+                        <span class="day-mode">☀️</span>
+                        <span class="night-mode">🌙</span>
+                    </label>
+                </div>
             </nav>
         </div>
     </header>
@@ -75,48 +80,45 @@
     </section>
     <footer> 
         <div class="container">
-            <div>
-                <div class="contact-details">
-                    <p>
-                        E-mail:&nbsp; <a href="mailto:ciceklercam@gmail.com">
-                            <span class="icon-envelope icon-white"></span>
-                            <button>Email Gönder</button>
-                        </a>
-                    </p>
-                        Harita:&nbsp; <a href="https://maps.app.goo.gl/Xb3kXgx88dxNdmTu5" target="_blank" class="map-link">
-                        <span class="icon-map-marker icon-white"></span>
-                        <button>Haritada Göster</button>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="ion-android-chat"></i>
+                    <p>ciceklercam@gmail.com</p>
+                    <a href="mailto:ciceklercam@gmail.com">
+                        <button>
+                            <i class="ion-chatbox-working"></i> 
+                            E-Mail Gönder
+                        </button>
                     </a>
-                    <p  class="footer-contact-number">
-                        Telefon:&nbsp;<span class="icon-phone icon-white"></span>
-                        <button>(364) 213 59 40</button>
-                    </p>
-                    <div class="footer-basic">
-                        <div class="social"><a href="https://www.instagram.com/cicekcamcorum?igsh=MXJqdW5xMmkxZXNkeA=="><i class="icon ion-social-instagram"></i></a><a href="https://wa.me/903642135940"><i class="icon ion-social-whatsapp"></i></i></a><a href="https://twitter.com/ErsanCicekci"><i class="icon ion-social-twitter"></i></a><a href="https://tr-tr.facebook.com/ersan.cicekci"><i class="icon ion-social-facebook"></i></a></div>
-                        <p class="copyright">Çiçek Cam PVC ve Cam Balkon Çözümleri, Tüm Hakları Saklıdır &copy; 2024</p>
-                    </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>   
+                </div>
+                <div class="contact-item">
+                    <i class="ion-android-phone-portrait"></i>
+                    <p>+90 (364) 213 59 40</p>
+                    <a href="tel:+903642135940">
+                        <button>
+                            <i class="ion-ios-telephone"></i>
+                            Bizi Arayın
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-basic">
+                <div class="social">
+                    <a href="https://www.instagram.com/cicekcamcorum?igsh=MXJqdW5xMmkxZXNkeA=="><i class="icon ion-social-instagram"></i></a>
+                    <a href="https://wa.me/903642135940"><i class="icon ion-social-whatsapp"></i></a>
+                    <a href="https://twitter.com/ErsanCicekci"><i class="icon ion-social-twitter"></i></a>
+                    <a href="https://tr-tr.facebook.com/ersan.cicekci"><i class="icon ion-social-facebook"></i></a>
+                </div>
+                <div class="footer-basic">
+                    <p class="copyright">Bu Site, "Yiğit Çiçekci" tarafından dizayn edilmiştir.</p>
+                    <p class="copyright">Cam PVC ve Cam Balkon Çözümleri, Tüm Hakları Saklıdır &copy; 2024</p>
                 </div>
             </div>
         </div>
-    </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const darkModeSwitch = document.getElementById('darkModeSwitch');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const body = document.body;
-
-        darkModeSwitch.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDarkMode = body.classList.contains('dark-mode');
-
-            // Toggle visibility of sun and moon icons
-            sunIcon.style.display = isDarkMode ? 'none' : 'inline';
-            moonIcon.style.display = isDarkMode ? 'inline' : 'none';
-        });
-    });
-</script>
+        <div class="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12126.757016818416!2d34.960678!3d40.548454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40872a9684882595%3A0x422b03d3346fe08d!2s%C3%87i%C3%A7ekler%20Cam%20PVC%20Cam%20Balkon%20Al%C3%BCminyum%20Do%C4%9Frama%20Kompozit%20Kaplama%20Cephe%20Giydirme!5e0!3m2!1str!2str!4v1726584888099!5m2!1str!2str"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>    
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

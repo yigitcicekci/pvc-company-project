@@ -4,15 +4,14 @@ body{
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: rgba(245, 245, 245, 0.925);
+    background-color: rgba(224, 187, 166, 0.925);
 }
 
 .container{
-    width: 80%;
+    width: 75%;
     margin: auto;
     overflow: hidden;
 }
-
 
 ul{
     margin: 0;
@@ -28,99 +27,156 @@ ul{
     color: #ffffff;
 }
 
-.dark-mode-switch {
-    cursor: pointer;
+.switch {
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    z-index: 1000;
+    margin-top: 100px;
 }
-
-.icon {
-    margin: 0 5px;
-}
-
-#moonIcon {
+  
+.toggle {
     display: none;
 }
-
-body.dark-mode {
+  
+.label {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    background-color: #a43a20;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+  
+.label .night-mode {
+    display: none;
+}
+  
+.toggle:checked + .label .day-mode {
+    display: none;
+}
+  
+.toggle:checked + .label .night-mode {
+    display: inline;
+}
+  
+.toggle:checked + .label {
     background-color: #040452;
-    color: #fff;
+    color: white;
 }
 
 body.dark-mode header {
     background-color: rgb(1, 5, 45);
     color: #ffffff;
-    border-bottom: rgb(255, 77, 0) 3px solid;
+    border-bottom: #040452 3px solid;
+}
+  
+body.dark-mode {
+    background-color: #040452;
+    color: #fff;
 }
 
-body.dark-mode header a {
-    color: gray;
-}
-
-body.dark-mode footer {
-    background: rgb(1, 5, 45);
-    color: #ffffff;
-    border-top: rgb(255, 77, 0) 3px solid;
-}
-
-body.dark-mode .footer-basic {
+.dark-mode footer {
+    color: #e0e0e0;
     background:  rgb(1, 5, 45);
-    color: #ffffff;
+    border-top: #555 3px solid;
 }
 
-body.dark-mode .product-info {
+.dark-mode footer .map-link button,
+.dark-mode footer a[href^="mailto"] button {
+    background: #040452;
+    color: #e0e0e0;
+}
+
+.dark-mode footer .footer-contact-number button {
+    color: #e0e0e0;
+    background: #040452;
+}
+
+.dark-mode .footer-basic {
+    background-color:  rgb(1, 5, 45);
+    color: #040452;
+}
+
+.dark-mode .footer-basic .social > a {
+    border: 1px solid #ff3f3f;
+    color: #e0e0e0;
+}
+
+.dark-mode .footer-basic .social > a:hover {
+    opacity: 0.9;
+}
+
+.dark-mode .footer-basic .copyright {
+    color: #888;
+}
+
+.dark-mode .contact-item button{
+    background-color: #040452;
+}
+
+.dark-mode .product-info {
     background-color: rgb(1, 5, 45);
-    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
 }
 
-header{
+
+header {
     background-color: rgb(120, 27, 27);
     color: #ffffff;
     padding-top: 30px;
-    min-height: 70px;
+    min-height: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     border-bottom: rgb(255, 77, 0) 3px solid;
+    position: relative;
 }
 
-header a{
+header a {
     color: gray;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-header li{
+header li {
     float: left;
     display: inline;
     padding: 0 20px 0 20px;
 }
 
-header #branding{
+header #branding {
     float: left;
 }
 
-header #branding h1{
+header #branding h1 {
     margin: 0;
 }
 
-header nav{
+header nav {
+    display: flex;
+    align-items: center;
     float: right;
     margin-top: 10px;
 }
 
-header .highlight , header .current a{
+header .highlight, header .current a {
     color: rgb(0, 221, 255);
     font-weight: bold;
 }
 
-header a:hover{
-color: black;
-font-weight: bold;
+header a:hover {
+    color: black;
+    font-weight: bold;
 }
+
 
 #product-grid {
     display: flex;
@@ -149,7 +205,10 @@ font-weight: bold;
 }
 
 .product-info {
-    background-color: #fff;
+    background-color: rgb(122, 51, 51);
+    color: wheat;
+    border: rgb(120, 27, 27);
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -162,15 +221,15 @@ font-weight: bold;
 .product-info a {
     display: block;
     margin-top: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color:  rgb(112, 20, 20);
+    color: wheat;
     text-decoration: none;
     padding: 8px;
     border-radius: 10px;
 }
 
 .product-info a:hover {
-    background-color: #555;
+    background-color:rgb(49, 4, 4);
 }
 
 * {box-sizing: border-box; }
@@ -183,10 +242,28 @@ font-weight: bold;
 .container1 img {
     width: 500px;
     height: auto;
+    border: red;
+    border-radius: 30px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-logos img {
+    margin: 0 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 .mySlides {
     display: none;
+}
+
+.mySlides img {
+    height: 750px;
 }
   
 .cursor {
@@ -228,12 +305,7 @@ font-weight: bold;
 }
   
 .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 5px;
+    display: none;
 }
   
 .row:after {
@@ -245,10 +317,15 @@ font-weight: bold;
 .column {
     float: left;
     width: 16.66%;
+    margin-bottom: 30px;
+}
+
+.column img {
+    height: 120px;
 }
 
 .demo {
-    opacity: 0.6;
+    opacity: 0.65;
 }
   
 .active,
@@ -264,10 +341,11 @@ font-weight: bold;
 }
 
 #showcase{
-    min-height: 650px;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Showcase/cicekcamimg1.png) no-repeat;
+    min-height: 100px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Showcase/cicekcamimg1.jpeg) no-repeat;
     background-size: cover;
     color: #ffffff;
+    border-radius: 50px;
 }
 
 #showcase h2{
@@ -283,6 +361,8 @@ font-weight: bold;
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Showcase/showcase4.jpg) no-repeat;
     background-size: cover;
     color: #ffffff;
+    border: #040452;
+    border-radius: 30px;
 }
 
 #showcase2 h2{
@@ -298,6 +378,8 @@ font-weight: bold;
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Products/pimapen-no-repeat.png) no-repeat;
     background-size: cover;
     color: #ffffff;
+    border: #040452;
+    border-radius: 30px;
 }
 
 #showcase3 h2{
@@ -334,6 +416,92 @@ font-weight: bold;
     }
 }
 
+@media only screen and (max-width: 768px) {
+    header {
+        text-align: center; /* Tüm içeriği ortala */
+        padding: 10px 0;
+    }
+
+    header #branding {
+        margin-bottom: 15px;
+        float: none;
+    }
+
+    header nav {
+        display: block; /* Menü elemanlarını blok şeklinde alt alta getir */
+        margin: 0;
+    }
+
+    header li {
+        display: block; /* Liste elemanlarını dikey yap */
+        width: 100%; /* Genişliği tam yap */
+    }
+
+    header a {
+        display: block; /* Menüdeki her link bloğu kaplasın */
+        padding: 10px 0;
+        width: 100%;
+        text-align: center; /* Ortala */
+    }
+
+    header #branding img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 10px auto; /* Logo ortalanmış ve altında boşluk var */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        overflow: hidden;
+        padding: 20px 10px;
+    }
+
+    .contact-details {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-item {
+        margin-bottom: 15px;
+    }
+
+    .contact-item p, .contact-item a button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .contact-item i {
+        margin-bottom: 10px;
+    }
+
+    .footer-basic .social {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .footer-basic .social > a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    footer .googleMaps {
+        margin-top: 300px !important;
+        z-index: 0 !important;
+        width: 100% !important;
+        height: 200px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .footer-basic .copyright {
+        font-size: 12px;
+        margin-top: 70px;
+    }
+}
+
+
+
 #boxes{
     margin-top: 20px;
     text-align: center;
@@ -348,34 +516,49 @@ font-weight: bold;
     
 }
 
+
 #boxes .box img{
     width: 150px;
     height: 150px;
     
 }
 
-footer{
+footer {
     padding: 5px;   
     color: #ffffff;
     background: rgb(120, 27, 27);
-    border-top: rgb(255, 77, 0) 3px solid;
+    border-top: rgb(120, 27, 27);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 footer .contact-details {
+    display: flex;
+    width: 40%;
     text-align: center;
 }
 
-footer .contact-details h4 {
-    text-align: left;
+.contact-item {
+    margin: 0 20px;
 }
 
-footer .map-link {
-    display: inline-block;
-    margin-top: 0px;
+.contact-item i {
+    font-size: 65px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-footer .map-link button,
-footer a[href^="mailto"] button {
+.contact-item p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.contact-item a button {
     background: rgb(255, 0, 21);
     color: #fff;
     border: none;
@@ -383,16 +566,17 @@ footer a[href^="mailto"] button {
     padding: 5px 10px;
     cursor: pointer;
     font-size: 12.5px;
-    margin: 5px; 
+    margin-top: 5px;
+    display: inline-flex;
+    align-items: center;
 }
 
-footer .map-link .icon-map-marker,
-footer a[href^="mailto"] .icon-envelope {
+.contact-item a button i {
     font-size: 18px;
     margin-right: 5px;
 }
 
-.footer-contact-number button{
+.footer-contact-number button {
     color: #ffffff;
     font-size: 16px;
     background: rgb(255, 0, 21);
@@ -404,42 +588,130 @@ footer a[href^="mailto"] .icon-envelope {
 }
 
 .footer-basic {
-    padding:40px 0;
-    background-color:rgb(120, 27, 27);
-    color:rgb(255, 0, 21);
+    padding: 40px 0;
+    background-color: rgb(120, 27, 27);
+    color: rgb(255, 0, 21);
 }
 
-  
-  .footer-basic .social {
-    text-align:center;
-  }
-  
-  .footer-basic .social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid rgb(255, 0, 21);
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
-  }
-  
-  .footer-basic .social > a:hover {
-    opacity:0.9;
-  }
-  
-  .footer-basic .copyright {
-    margin-top:15px;
-    text-align:center;
-    font-size:13px;
-    color:#cccaca;
-    margin-bottom:0;
-  }
+.footer-basic .social {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    margin-left: 120px;
+}
 
+.footer-basic .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 0, 21);
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+    opacity: 0.9;
+}
+
+.footer-basic .copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #cccaca;
+    margin-bottom: 0;
+}
+
+footer .googleMaps {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px; 
+    height: 300px; 
+    z-index: 5;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+iframe {
+    border: #222;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+
+footer .map-link {
+    text-align: right;
+    max-width: 50%;
+}
+
+footer .map-link button,
+footer a[href^="mailto"] button {
+    background: rgb(255, 0, 21);
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 5px;
+}
+
+footer .map-link .icon-map-marker,
+footer a[href^="mailto"] .icon-envelope {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.footer-contact-number button {
+    color: #ffffff;
+    font-size: 16px;
+    background: rgb(255, 0, 21);
+    border: none;
+    border-radius: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around; /* E-Mail ve Telefon kısmını yan yana hizalar */
+    width: 100%;
+}
+
+.contact-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+
+.footer-contact-number button {
+    color: #ffffff;
+    font-size: 16px;
+    background: rgb(255, 0, 21);
+    border: none;
+    border-radius: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around; /* E-Mail ve Telefon kısmını yan yana hizalar */
+    width: 100%;
+}
+
+.contact-item {
+    text-align: center;
+    margin: 0 20px;
+}
 
 .imgcontainer img{
     width: 100%;
